@@ -4,19 +4,24 @@ import { Button, Text, TextInput } from "react-native-paper";
 import { styles } from "../utils/styles";
 
 export default function CreateUser() {
-  const [Nome, setNome] = useState("");
+  const [nome, setNome] = useState("");
+
+  function cadastrarPessoa(){
+    console.log(nome);
+  }
 
   return (
     <View style={styles.container}>
       <Text>Cadastrar Pessoa</Text>
       <View>
         <TextInput
-          label={"Nome"}
+          label={"nome"}
           mode="outlined"
           placeholder="Digite seu nome..."
           onChangeText={setNome}
+          value={nome}
         />
-        <Button>Cadastrar</Button>
+        <Button onPress={cadastrarPessoa}>Cadastrar</Button>
       </View>
     </View>
   );
