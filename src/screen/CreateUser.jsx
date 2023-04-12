@@ -17,6 +17,7 @@ export default function CreateUser() {
       nomeDaPessoa: nome,
       telefoneDaPessoa: telefone,
     });
+    
   }
 
   return (
@@ -33,7 +34,7 @@ export default function CreateUser() {
         <TextInput
           label={"telefone"}
           mode="outlined"
-          placeholder="Digite seu nome..."
+          placeholder="Digite seu telefone..."
           onChangeText={setTelefone}
           value={telefone}
         />
