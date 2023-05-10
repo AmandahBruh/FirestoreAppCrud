@@ -23,7 +23,7 @@ export default function BuscarUsuarioScreen() {
     async function handleBuscaUsuario() {
 
         //get current user logged in Firebase
-        auth
+        
 
         try {
             console.log("Buscar Usuario")
@@ -33,6 +33,8 @@ export default function BuscarUsuarioScreen() {
             querySnapshot.forEach((doc) => {
                 console.log(doc.id, " => ", doc.data());
             });
+        } catch (error) {
+            console.log("Erro ao buscar usuário: ", error)
         }
     }
 
