@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { View } from "react-native";
 import { Button, Text, TextInput } from "react-native-paper";
 import { auth } from "../config/firebase";
-import styles from "../config/styles";
 
 export default function LoginScreen({ navigation }) {
     const [email, setEmail] = useState('')
@@ -37,9 +36,7 @@ export default function LoginScreen({ navigation }) {
     }
 
     return (
-        <View
-            style={styles.container}
-        >
+        <View>
             <Text>Faça seu Login</Text>
             <TextInput
                 label="Email"

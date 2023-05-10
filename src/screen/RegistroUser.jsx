@@ -1,6 +1,5 @@
 import { View } from "react-native";
 import { Button, Text, TextInput } from "react-native-paper";
-import styles from "../config/styles";
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../config/firebase";
@@ -34,7 +33,7 @@ export default function RegisterUsuario({ navigation }) {
     }
 
     return (
-        <View style={styles.container}>
+        <View>
             <Text>Registro</Text>
             <TextInput
                 onChangeText={setNome}

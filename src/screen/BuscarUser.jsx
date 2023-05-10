@@ -1,13 +1,13 @@
 import { collection } from "firebase/firestore";
 import { View } from "react-native";
-import { TextInput } from "react-native-paper";
+import { Button, Text, TextInput } from "react-native-paper";
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from "../config/firebase";
 import { useEffect } from "react";
 
 
 
-export default function BuscarUsuarioScreen() {
+export default function BuscarUsuarioScreen({ navigation }) {
 
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
@@ -21,8 +21,6 @@ export default function BuscarUsuarioScreen() {
     });
 
     async function handleBuscaUsuario() {
-
-        //get current user logged in Firebase
         
 
         try {
@@ -46,8 +44,9 @@ export default function BuscarUsuarioScreen() {
                 label="Buscar Usuario"
                 mode="outlined"
                 style={{ margin: 10 }}
-            />
-
+            >
+            </TextInput>
+            <Button onPress={handleBuscaUsuario}>AAAAAAAAA</Button>
 
         </View>
     )

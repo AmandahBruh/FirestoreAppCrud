@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { View } from "react-native";
 import { Button, Text, TextInput } from "react-native-paper";
-import { styles } from "../utils/styles";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../config/firebase";
 
-export default function CreateUser() {
+
+export default function CreateUser({ navigation }) {
   const [nome, setNome] = useState("");
   const [telefone, setTelefone] = useState("");
 
@@ -21,7 +21,7 @@ export default function CreateUser() {
   }
 
   return (
-    <View style={styles.container}>
+    <View>
       <Text>Cadastrar Pessoa</Text>
       <View>
         <TextInput
