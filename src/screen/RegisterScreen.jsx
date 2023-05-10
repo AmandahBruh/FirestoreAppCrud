@@ -84,7 +84,7 @@ export default function RegisterScreen({ navigation }) {
             })
             return
         }
-
+        
         createUserWithEmailAndPassword(auth, email.value, password.value)
             .then((userCredential) => {
                 const user = userCredential.user;
